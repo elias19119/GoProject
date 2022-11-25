@@ -24,7 +24,7 @@ func main() {
 	var router = mux.NewRouter()
 	router.HandleFunc("/customers", customers).Methods("Get").Name("customers")
 
-	err := http.ListenAndServe(":8080", router)
+	err := http.ListenAndServe("go-project-crt-643934-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/", router)
 	if err != nil {
 		log.Fatal(err)
 	}
